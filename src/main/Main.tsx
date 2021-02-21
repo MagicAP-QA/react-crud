@@ -7,7 +7,7 @@ const Main = () => {
     useEffect(() => {
         (
             async () => {
-                const response = await fetch('http://localhost:8001/api/products');
+                const response = await fetch('http://localhost:5000/api/products');
 
                 const data = await response.json();
 
@@ -17,7 +17,7 @@ const Main = () => {
     }, []);
 
     const like = async (id: number) => {
-        await fetch(`http://localhost:8001/api/products/${id}/like`, {
+        await fetch(`http://localhost:5000/api/products/${id}/like`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'}
         });
@@ -37,7 +37,7 @@ const Main = () => {
         <main role="main">
             <div className="album py-5 bg-light">
                 <div className="container">
-                <a href="http://localhost:8001/login">Login</a>
+                <a href="http://localhost:5000/login">Login</a>
         
                     <div className="row">
                         {products.map(
