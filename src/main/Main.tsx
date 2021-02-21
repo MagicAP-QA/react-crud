@@ -37,6 +37,8 @@ const Main = () => {
         <main role="main">
             <div className="album py-5 bg-light">
                 <div className="container">
+                <a href="http://localhost:8001/login">Login</a>
+        
                     <div className="row">
                         {products.map(
                             (p: Product) => {
